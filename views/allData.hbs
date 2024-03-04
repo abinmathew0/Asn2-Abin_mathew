@@ -1,0 +1,22 @@
+<h2>All Books</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>ISBN-13</th>
+      <th>Author</th>
+      <th>Average Reviews</th>
+    </tr>
+  </thead>
+<tbody>
+  {{#each books}}
+    <tr style="{{#unless this.avg_reviews}}background-color: #ffcccc;{{/unless}}">
+      <td>{{this.title}}</td>
+      <td>{{this.ISBN_13}}</td>
+      <td>{{this.author}}</td>
+      <td>{{formatAvgReviews this.avg_reviews}}</td>
+    </tr>
+  {{/each}}
+</tbody>
+
+</table>

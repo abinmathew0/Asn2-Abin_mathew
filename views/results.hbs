@@ -1,0 +1,10 @@
+<h2>Search Results</h2>
+{{#each books}}
+  <div>
+    <p><strong>Title:</strong> {{this.title}}</p>
+    <p><strong>ISBN:</strong> {{this.ISBN_13}}</p>
+    <p><strong>Author:</strong> {{this.author}}</p>
+  </div>
+{{else}}
+  <p>No books found.</p>
+{{/each}}
